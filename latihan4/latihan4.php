@@ -1,40 +1,75 @@
-
+```php
 <?php
-    $nama_hari = date("l");
 
-    switch ($nama_hari) {
-        case "Sunday":
-            print("Minggu <br>");
-            print "Waktu untuk istirahat";
-            break;
+for ($i = 1; $i < 11; $i++) {
 
-        case "Monday":
-            print("Senin <br>");
-            print "Meeting awal minggu jam 08.00";
-            break;
-
-        case "Tuesday":
-            print("Selasa <br>");
-            print "Pembukaan Workshop Diklat";
-            break;
-
-        case "Wednesday":
-            print("Rabu <br>");
-            print("Seminar Launching Windows Vista di JHCC");
-            break;
-
-        case "Thursday":
-            print("Kamis <br>");
-            print "Pertemuan dengan Mahasiswa";
-            break;
-
-        case "Friday":
-            print("Jum'at <br>");
-            print "Jogging bersama";
-            break;
-
-        default:
-            print("Sabtu <br>");
-            print "Survey harga ke Dusit, Mangga Dua";
+    if ($i % 2 == 0) {
+        continue;
+    } else {
+        echo $i;
     }
+
+}
+
 ?>
+```
+
+### Hasil output
+
+```text
+13579
+```
+
+Kalau ingin setiap angka tampil di baris baru, lebih bagus menggunakan:
+
+```php
+<?php
+
+for ($i = 1; $i < 11; $i++) {
+
+    if ($i % 2 == 0) {
+        continue;
+    } else {
+        echo $i . "<br>";
+    }
+
+}
+
+?>
+```
+
+Hasilnya:
+
+```text
+1
+3
+5
+7
+9
+```
+
+### Cara kerja `continue`
+
+Bagian ini:
+
+```php
+if ($i % 2 == 0) {
+    continue;
+}
+```
+
+berarti **jika `$i` adalah angka genap, lewati perulangan tersebut**.
+
+Urutannya:
+
+```text
+1 → tampil
+2 → dilewati
+3 → tampil
+4 → dilewati
+5 → tampil
+6 → dilewati
+7 → tampil
+8 → dilewati
+9 → tampil
+```
