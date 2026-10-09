@@ -1,4 +1,3 @@
-```php
 <?php
 
 // Membuat fungsi repeat dengan parameter default 10
@@ -21,4 +20,3 @@ repeatText("I'm the best", 15);
 repeatText("You're the man");
 
 ?>
-```
